@@ -6,11 +6,5 @@ export default defineConfig({
   build: {
     outDir: '../dist',
     emptyOutDir: true,
-    rollupOptions: {
-      input: {
-        index: resolve(__dirname, 'src/index.html'),
-        form: resolve(__dirname, 'src/form/form.html'),
-      },
-    },
   },
 });
