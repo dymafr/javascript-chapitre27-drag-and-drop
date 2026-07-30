@@ -4,13 +4,16 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100vh;
+}
+
 ul {
   list-style: none;
 }
 
 .container {
-  height: 100vh;
-  width: 100vw;
+  min-height: 70vh;
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -29,7 +32,7 @@ ul {
   background: #778beb;
 }
 
-li {
+.list-elem {
   background: #303952;
   color: white;
   font-weight: 700;
@@ -41,5 +44,23 @@ li {
 }
 
 .drop {
-  border: 2px dashed red;
+  outline: 2px dashed red;
+  outline-offset: -4px;
+}
+
+.files {
+  padding: 1rem;
+}
+
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+#gallery img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
 }

@@ -1,18 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Drag and drop natif</title>
     <script type="module" src="./index.js"></script>
   </head>
-  <body class="container">
-    <ul class="list list-left">
-      <li id="first" draggable="true" class="list-elem">
-        Je suis un exemple 1
-      </li>
-    </ul>
-    <ul class="list list-right"></ul>
+  <body>
+    <main class="container">
+      <ul id="left-list" class="list list-left" aria-label="Liste de gauche">
+        <li id="first" draggable="true" class="list-elem">
+          <span>Je suis un exemple 1</span>
+          <button type="button" data-move-to="#right-list">Déplacer à droite</button>
+        </li>
+      </ul>
+      <ul id="right-list" class="list list-right" aria-label="Liste de droite"></ul>
+    </main>
+
+    <section class="files">
+      <label for="file-input">Ajouter des images</label>
+      <input id="file-input" type="file" accept="image/*" multiple />
+      <div id="gallery" aria-live="polite"></div>
+    </section>
   </body>
 </html>

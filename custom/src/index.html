@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Déplacement personnalisé</title>
     <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <div class="block left">
+    <section id="left" class="block left drop-zone" aria-label="Zone bleue">
       <img
-        src="https://www.contrepoints.org/wp-content/uploads/2013/01/picsou.png"
+        class="draggable"
+        src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Donald_Duck.svg/1200px-Donald_Duck.svg.png"
+        alt="Donald Duck"
       />
-    </div>
-    <div class="block right"></div>
+      <button type="button" data-move-to="#left">Déplacer dans la zone bleue</button>
+    </section>
+    <section id="right" class="block right drop-zone" aria-label="Zone verte">
+      <button type="button" data-move-to="#right">Déplacer dans la zone verte</button>
+    </section>
+    <p id="status" class="sr-only" aria-live="polite"></p>
   </body>
 </html>

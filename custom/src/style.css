@@ -4,12 +4,8 @@
   box-sizing: border-box;
 }
 
-.border {
-  border: 2px solid red;
-}
-
 body {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -17,6 +13,7 @@ body {
 
 .block {
   flex: 1 1 50%;
+  padding: 1rem;
 }
 
 .left {
@@ -25,4 +22,34 @@ body {
 
 .right {
   background: green;
+}
+
+.draggable {
+  width: 200px;
+  height: auto;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.draggable.is-dragging {
+  border: 2px solid red;
+  cursor: grabbing;
+}
+
+.drop-zone.is-active {
+  outline: 4px dashed white;
+  outline-offset: -8px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
